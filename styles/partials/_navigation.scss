@@ -1,0 +1,36 @@
+.main-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #345231;
+    height: 10vh;
+    padding: 20px;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 25px;
+            &:hover {
+                color: $secondary-color;
+                border-bottom: 1px solid $secondary-color;
+                transition: 1s ease;
+                padding-bottom: 5px;
+            }
+
+            &:focus, &:active {
+                color: $secondary-color;
+            }
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-family: 'Abril Fatface', cursive;
+        }
+    }
+}

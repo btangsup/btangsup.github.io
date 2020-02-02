@@ -1,0 +1,644 @@
+@import "../partials/normalize";
+@import "../partials/variables";
+@import "../partials/global";
+@import "../partials/navigation";
+@import "../partials/gallery-banner";
+@import "../partials/form";
+@import "../partials/copyright";
+
+
+/* HEADER STYLES */
+
+.hero {
+    background-color: #345231;
+    height: 100vh;
+    position: relative;
+}
+
+.main-title-container {
+    @include flexbox-center();
+
+    .headshot {
+        box-shadow: 15px 15px white;
+        margin-left: 30px;
+        margin-top: 40px;
+        width: 85%;
+    }
+}
+
+.title-container {
+    position: relative;
+        .circle-text {
+            width: 150px;
+            position: absolute;
+            top: -100px;
+            left: -65px;
+    }
+}
+
+.main-title {
+    font-family: 'Abril Fatface', cursive;
+    @include fluid-type (8rem, 14rem, 500px, 850px);
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+    header .hamburger {
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    font-size: 4rem;
+    visibility: hidden;
+    z-index: 1;
+    color: #E4A436;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+
+#menu-toggle {
+    display: none;
+}
+
+
+
+
+/*ABOUT STYLES */
+
+.about {
+    background-color: #f6f6f6;
+    text-align: center;
+    padding: 75px 0 150px;
+}
+
+.post {
+    background-color: #fff;
+}
+
+.favourite-things-container,
+.bucket-list-container {
+    display: flex;
+}
+
+.favourite-things-post {
+    text-align: left;
+    width: 50%;
+    padding: 75px;
+}
+
+.bucket-list-post {
+    text-align: right;
+    padding: 0 75px;
+}
+
+.favourite-things-post,
+.bucket-list-post {
+    width: 50%;
+}
+
+.favourite-things,
+.bucket-list {
+    width: 50%;
+}
+
+.favourite-container {
+    position: relative;
+    z-index: 1;
+    top: -40px;
+}
+
+.favourite-img {
+    box-shadow: 20px 20px #345231, -300px 20px #345231;
+}
+
+.bucket-img {
+    box-shadow: 20px 20px #709B6B, 300px 20px #709B6B;
+}
+
+.journey {
+    background: #f6f6f6;
+    padding: 100px;
+
+    .journey-img {
+        width: 450px;
+        margin-right: 100px;
+        box-shadow: 20px 20px #709B6B;
+    }
+
+    .journey-post {
+        width: 70%;
+    }
+}
+
+.journey-container {
+    display: flex;
+}
+
+
+/* FOOTER STYLES */
+
+footer {
+    background-color: #f6f6f6;
+    padding: 75px;
+
+    .flex-footer-container {
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+
+    }
+}
+
+footer li {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.icon-container {
+    width: 140px;
+    height: 50px;
+    background-color: #E4A436;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    padding-left: 20px;
+}
+
+/* BLOG PAGE STYLES */
+
+/* BLOG HEADER STYLES */
+
+.blog-hero {
+    background-image: url(../willow-assets/blog-image-1.jpg);
+    @include small-hero();
+}
+
+.title {
+    color: #ffffff;
+    text-transform: uppercase;
+    // font-size: 5rem;
+    @include fluid-type (2.5rem, 5rem, 360px, 1300px);
+    font-family: $primary-font;
+    display: flex;
+    align-items: flex-end;
+    height: 83%;
+}
+
+.main-blog-container {
+    background-color: $tertiary-color;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.aside-container {
+    width: calc(36% - 40px);
+}
+
+.blog-container {
+    width: calc(64% - 40px);
+}
+
+.aside-container,
+.blog-container {
+    margin: 20px;
+    margin-top: 90px;
+    margin-left: 0;
+}
+
+
+.blog {
+    background-color: #fff;
+    padding: 35px;
+    margin-bottom: 20px;
+    border-bottom: 8px solid #709B6B;
+}
+
+.blog-aside,
+.related-posts {
+    padding: 38px;
+    background-color: #fff;
+    margin-bottom: 25px;
+    
+
+    .blog-link {
+        display: inline-block;
+        text-decoration: none;
+        color: #709B6B;
+        text-transform: none;
+
+        &:hover {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+}
+
+.comments {
+
+    .comment-1,
+    .comment-2 {
+        background-color: #fff;
+        display: flex;
+        margin: 10px 0;
+        padding: 40px;
+        border-bottom: 8px solid #709B6B;
+
+        .comment-container img {
+        width: 125px;
+        margin: 10px 20px 0 0;
+
+        }
+    }
+}
+
+
+/* CONTACT PAGE STYLES */
+
+/* CONTACT HEADER STYLES */ 
+.contact-hero {
+    background-image: url(../willow-assets/contact-image-1.jpg);
+    @include small-hero();
+}
+
+.contact-container {
+    background-color: $tertiary-color;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 100px;
+}
+
+.social {
+    background: #fff;
+    padding: 40px 25px;
+
+    .social-icon {
+        display: flex;
+
+        .icon {
+            color: #345231;
+            padding: 15px;
+            font-size: 2.5rem;
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            transition: 0.3s ease;
+            transition-property: transform;
+
+            &:hover {
+                transform: scale(2);
+                color: #345231;
+                transition: .2s ease;
+            }
+        }
+    }
+}
+
+.info {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    a {
+        color: $primary-color;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: lowercase;
+    }
+}
+
+.social ul {
+        list-style-type: none;
+        margin: 0;
+    }
+
+.contact-form {
+    width: 65%;
+}
+
+/* MEDIA QUEIRES */
+
+@media (max-width: 1300px) {
+
+
+    .wrapper {
+        width: 100%;
+
+    }
+
+    .main-title-container {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .headshot {
+            width: 300px;
+            padding-bottom: 75px;
+            box-shadow: none;
+        }
+    }
+
+    .journey-container {
+        flex-direction: column;
+        width: 100%;
+
+        .journey-post {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+
+
+}
+
+
+/* TABLET QUERY */
+
+@media (max-width: 900px) {
+
+
+
+    header .hamburger {
+        visibility: visible;
+    }
+  
+    #mobile-nav {
+        position: fixed;
+        height: 40vh;
+        padding: 0;
+
+        .logo {
+            display: none;
+        }
+    }
+
+    #menu-toggle:checked ~ ul {
+        display: none;
+   
+    }
+
+    .menu-box {
+
+        display: block;
+        position: relative;
+        top: 70px;
+        left: 0px;
+        z-index: 3;
+    }
+
+
+    #mobile-nav ul {
+        display: block;
+        background-color: #345231;
+        display: block;
+        height: 0;
+        list-style-type: none;
+        text-align: center;
+        transition: 0s;
+        width: 100%;
+        }
+        
+        li {
+        display: block;
+        padding: 5px;
+        
+   }
+
+      .main-title-container {
+
+            .headshot {
+            padding-top: 50px;
+            width: 250px;
+            margin-top: 150px;
+        }
+            .circle-text {
+                // width: 100px;
+            }
+    }
+
+
+    .post {
+        padding: 0;
+    }
+
+    // .circle-text {
+    //     display: none;
+    // }
+
+    .favourite-container {
+        top: 0;  
+        position: none;
+        z-index: 0;
+    }
+
+    .favourite-things-container,
+    .bucket-list-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .favourite-things-post,
+        .bucket-list-post {
+            width: 100%;
+            text-align: center;
+            padding: 75px;
+
+        }
+    }
+
+.bucket-list {
+        width: 75%;  
+    }
+
+
+.bucket-img,
+.favourite-img {
+    box-shadow: none;
+}
+
+.bucket-list-container {
+    flex-direction: column-reverse;
+}
+
+.journey {
+    padding: 50px 0;
+
+
+    .journey-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .journey-img {
+            box-shadow: none;
+            margin: 0 auto 50px;
+        }
+    }
+}
+
+
+
+
+.gallery {
+    background-color: #345231;
+
+    .gallery-flex {
+        display: flex;
+        flex-direction: column;
+
+        .gallery-item {
+            border: 10px solid #E4A436;
+        }
+    }
+
+}
+
+.footer-container li {
+    width: 100%;
+}
+
+.banner-1 {
+    display: none;
+}
+
+.banner-2 {
+    display: block;
+    width: 100%;
+    background-image: url(../willow-assets/home-image-5.jpg);
+    height: 45vh;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blog-container,
+.aside-container {
+    margin: 0;
+}
+
+.aside-container {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    text-align: center;
+
+    .blog-aside,
+    .related-posts {
+        width: 100%;
+
+        .willow-img-container {
+            width: 300px;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+
+    .blog-container {
+        width: 100%;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .social {
+        text-align: center;
+    }
+
+    .social-icon {
+        justify-content: center;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+
+    .title {
+        @include flexbox-center();
+    }
+
+
+   
+
+    .bucket-list-post,
+    .favourite-things-post {
+        padding: 0px;
+        width: 100%;
+    }
+
+    .favourite-container,
+    .bucket-list {
+        width: 100%;
+    }
+
+   
+
+    .gallery {
+        display: none;
+    }
+
+
+    footer {
+        border-top: 10px solid #709B6B;
+        padding: 25px;
+
+    }
+
+    .comment-1,
+    .comment-2 {
+        flex-direction: column;
+    }
+
+    .comment-container {
+        margin: 0 auto;
+    }
+
+   
+    .form {
+
+        .flex-form {
+            
+
+                .form-email,
+                .form-name {
+                 
+                    width: 100%;
+                    margin: 25px 0px;
+                    
+            }
+                text-area,
+                a {
+                    margin: 0;
+                }
+
+        }
+    }
+
+    .contact-container {
+        margin: 0;
+    }
+
+
+}
+
+
+
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Abril Fatface', cursive;

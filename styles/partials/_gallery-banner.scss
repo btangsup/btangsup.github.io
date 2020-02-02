@@ -1,0 +1,29 @@
+/* BANNER STYLES */
+
+.banner-1 {
+    width: 100%;
+    background-image: url(../willow-assets/home-image-5.jpg);
+    height: 45vh;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* GALLERY STYLES */
+
+.gallery {
+    background-color: #fff;
+    padding: 100px;
+}
+
+.gallery-container ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+ .gallery-item {
+        width: calc(33.3% -20px);
+        margin: 10px;
+    }
